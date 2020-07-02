@@ -1,0 +1,28 @@
+{
+  "title": "Welcome to CurrencyXChange",
+  "listPlaceHolder": "Select one...",
+  "form": {
+    "date": "Date",
+    "amount": "Amount",
+    "from": "From",
+    "to": "To",
+    "convert": "Convert"
+  },
+  "header": {
+    "dismiss": "Dismiss",
+    "privacy": "By using CurrencyXChange, you agree to our <a href=\"#\" class=\"alert-link\" (click)=\"showModal('privacy')\">Privacy Policy</a> and\n    <a href=\"#\" class=\"alert-link\" (click)=\"showModal('termsOfUse')\">Terms</a>.",
+    "upcomingFeature": "<strong>Coming Soon!</strong>&nbsp;&nbsp;&nbsp;Charts of rates conversion history."
+  },
+  "footer": {
+    "termsOfUse": "Terms of use",
+    "privacy": "Privacy",
+    "iconMadeBy": "Icons made by <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a>"
+  },
+  "result": {
+    "equalsTo": "Equals To",
+    "onDate": "On",
+    "errorMessage": "Sorry, there is no data for the selected date",
+    "tryAgainMessage": "Please try again with a different date, thank you!"
+  },
+  "loading": "Fetching Data..."
+}

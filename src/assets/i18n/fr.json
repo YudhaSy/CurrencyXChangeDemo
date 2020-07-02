@@ -1,0 +1,28 @@
+{
+  "title": "Bienvenue à CurrencyXChange",
+  "listPlaceHolder": "Sélectionnez un...",
+  "form": {
+    "date": "Date",
+    "amount": "Montant",
+    "from": "De",
+    "to": "À",
+    "convert": "Convertir"
+  },
+  "header": {
+    "dismiss": "Fermer",
+    "privacy": "En utilisant CurrencyXChange, vous acceptez nos <a href=\"#\" class=\"alert-link\" (click)=\"showModal('privacy')\">Règles de confidentialité</a> et <a href=\"#\" class=\"alert-link\" (click)=\"showModal('termsOfUse')\">Conditions d'utilisation</a>.",
+    "upcomingFeature": "<strong>Bientôt disponible!</strong>&nbsp;&nbsp;&nbsp;\nGraphiques de l'historique des conversions de taux."
+  },
+  "footer": {
+    "termsOfUse": "Conditions d'utilisation",
+    "privacy": "Règles de confidentialité",
+    "iconMadeBy":"Icônes faites par <a href=\"https://www.flaticon.com/authors/freepik\" title=\"Freepik\">Freepik</a> de <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a>"
+  },
+  "result": {
+    "equalsTo": "Égale à",
+    "onDate": "Sur",
+    "errorMessage": "Désolé, il n'y a pas de données pour la date sélectionnée",
+    "tryAgainMessage": "Veuillez réessayer avec une date différente, merci!"
+  },
+  "loading": "Récupération des données..."
+}

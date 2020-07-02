@@ -1,0 +1,49 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)"
+             size="medium"
+             color="#fff"
+             type="pacman"
+             [fullScreen]="true">
+  <p class="text-white">{{'loading' | translate}}</p>
+</ngx-spinner>
+<div class="w-100">
+  <ng-container [ngTemplateOutlet]="currentAlert === 'privacyTerms' ? privacyTermsAlert : upcomingFeatureAlert"></ng-container>
+</div>
+<div class="container-fluid h-100">
+  <div class="row h-75">
+    <div class="col-sm-12 col-md-12">
+      <app-content
+        [data]="data">
+      </app-content>
+    </div>
+<!--    <div class="col-sm-12 col-md-4">-->
+<!--      <div class="card card-body h-100">-->
+<!--        ADs here-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+  <div class="row h-25">
+    <div class="col-12">
+      <div class="card h-100">
+<!--        <div class="card-body">-->
+<!--          AD Here-->
+<!--        </div>-->
+        <div class="card-footer bg-white">
+          <span><a href="#" class="float-left" (click)="showModal('termsOfUse')">{{'footer.termsOfUse' | translate}}</a></span>
+          <span><a href="#" class="pl-3" (click)="showModal('privacy')">{{'footer.privacy' | translate}}</a></span>
+          <div class="float-right" [innerHTML]="'footer.iconMadeBy' | translate"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #upcomingFeatureAlert>
+  <alert [dismissOnTimeout]="5000" type="info">
+    <span [innerHTML]="'header.upcomingFeature' | translate"></span>
+  </alert>
+</ng-template>
+<ng-template #privacyTermsAlert>
+  <alert type="warning">
+    <button type="button" class="btn-primary float-right" (click)="currentAlert = featureAlert">{{'header.dismiss' | translate}}</button>
+    <span [innerHTML]="'header.privacy' | translate"></span>
+  </alert>
+</ng-template>

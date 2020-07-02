@@ -1,0 +1,66 @@
+<div class="card bg-dark text-white h-100">
+  <div class="card-header">
+    <h1>{{'title' | translate}}</h1>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <label>{{'form.date' | translate}}</label>
+          <input type="text"
+                 class="form-control custom-input-height"
+                 bsDatepicker
+                 [(bsValue)]="dateVal"
+                 [minDate]="minDate"
+                 [maxDate]="maxDate"
+                 [bsConfig]="{ isAnimated: true }">
+        </div>
+        <div class="col">
+          <label>{{'form.amount' | translate}}</label>
+          <input class="form-control custom-input-height" [(ngModel)]="amount" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col pr-0">
+          <label>{{'form.from' | translate}}</label>
+          <app-select
+            [data]="fromData"
+            [(selectedData)]="fromSelectedName">
+          </app-select>
+        </div>
+        <div class="col-1 text-center no-label p-0">
+          <span class="swap" (click)="swapData()"><i class="fas fa-exchange-alt"></i></span>
+        </div>
+        <div class="col pl-0">
+          <label>{{'form.to' | translate}}</label>
+          <app-select
+            [data]="toData"
+            [(selectedData)]="toSelectedName">
+          </app-select>
+        </div>
+      </div>
+      <div class="form-row pt-3">
+        <div class="col">
+          <button class="btn custom-input-height"
+                  [ngClass]="isDisabled() ? 'btn-light' : 'btn-success'"
+                  [style]="'width: 100%'"
+                  [disabled]="isDisabled()"
+                  (click)="convert()">{{'form.convert' | translate}}</button>
+        </div>
+      </div>
+    </form>
+    <div *ngIf="result || error" class="text-center mt-4">
+      <ng-container *ngIf="result; else errorTemplate">
+        <h3><span class="text-info">{{amount | number: '1.2-10'}}</span>{{resultLine1}}</h3>
+        <h5 class="text-success">{{'result.equalsTo' | translate}}</h5>
+        <h3><span class="text-info">{{calculatedData | number: '1.2-10'}}</span>{{resultLine2}}</h3>
+        <h5 class="text-success">{{'result.onDate' | translate}}</h5>
+        <h3>{{resultLine3}}</h3>
+      </ng-container>
+      <ng-template #errorTemplate>
+        <h2 class="text-danger">{{'result.errorMessage' | translate}}</h2>
+        <h2 class="text-info">{{'result.tryAgainMessage' | translate}}</h2>
+      </ng-template>
+    </div>
+  </div>
+</div>
