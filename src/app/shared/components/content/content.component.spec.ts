@@ -113,7 +113,7 @@ describe('ContentComponent', () => {
     expect(component.toCurrencyValue).toBe(1.6067854114);
     expect(component.buildResultStrings).toHaveBeenCalled();
     expect(component.result).toBeTrue();
-    expect(component.calculatedData).toBe('1.05');
+    expect(component.calculatedData).toBe(1.0544948511077548);
   });
 
   it('should disable the convert button', () => {
