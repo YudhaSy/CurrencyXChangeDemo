@@ -8,7 +8,6 @@ import {CUSTOM_ELEMENTS_SCHEMA, Injectable} from '@angular/core';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {AlertModule} from 'ngx-bootstrap/alert';
 import {TranslateModule} from '@ngx-translate/core';
-import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 
 @Injectable()
 class StubbedModalService {
